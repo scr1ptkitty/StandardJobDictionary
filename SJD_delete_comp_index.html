@@ -9,7 +9,7 @@
 			$('.button').click(function()
 			{
 				var clickBtnValue = $(this).val();
-				var ajaxurl = 'SJD_get_DB.php',
+				var ajaxurl = 'SJD_get_employer.php',
 				data =  {'action': clickBtnValue};
 						$.post(ajaxurl, data, function (response){
 						// Response div goes here.
@@ -26,23 +26,13 @@
        
         <div align = "center">
          <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Add</b></div>    
+            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Delete</b></div>    
             <div style = "margin:30px">
             
-                <form action="SJD_get_DB.php" method="post">
-                <label>First Name:  </label><input type="text" name="firstname"><br>
-        
-                <label>Last Name: </label><input type="text" name="lastname"><br /><br />
-        
-                <label>User ID: </label><input type="text" name="userid"><br /><br />
-        
-                <label>Skill: </label><input type="text" name="skill"><br /><br />
-        
-                <label>Skill Proficiency: </label><input type="text" name="skillpro"><br /><br />
+                <form action="SJD_get_employer.php" method="post">
+                <label>Job Title:  </label><input type="text" name="jobtitle"><br>
 				
-                <input type="submit" name="SubmitBT" value="Submit" /><br />
-				<input type="submit" name="ChangeBT" value="Change" /><br />
-				<input type="submit" name="DeleteBT" value="Remove" /><br />
+                <input type="submit" name="DeleteBT" value="Delete" /><br />
                 </form>
 				<br />
 				<a href="SJD_employer_index.html">Company Index</a>
